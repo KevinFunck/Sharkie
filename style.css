@@ -1,0 +1,616 @@
+body {
+    margin: 0px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url(img/Background.png);
+    font-family: 'Brave', Arial, Helvetica, sans-serif;
+    color: aliceblue; 
+}
+
+
+h1 {
+    font-size: 80px;
+    text-shadow: 5px 5px 8px rgba(0,0,0,0.7);
+    transform: translateY(-5%);
+    animation: floater 3.5s infinite;
+    transition: ease 0.5s;
+  
+}
+
+
+@keyframes floater {
+  0%{transform: translateY(-2%);transition: ease 0.5s;}
+  20%{transform: translateY(2%);transition: ease 0.5s;}
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+
+
+.titlesharkie {
+  margin: 0px;
+}
+
+
+canvas {
+    background-color: black;
+    display: block;
+    
+}
+
+
+.canvas-shadow {
+    box-shadow:  0 0 10px 10px ;
+    
+}
+
+
+.screens {
+    position: relative;
+    height: 480;
+    width: 720;
+}
+
+
+@font-face {
+    font-family: 'Brave';
+    src:
+         url('fonts/Brave\ Gates.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
+
+.startscreen  {
+    background-image: url(img/startscreen.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+.d-none {
+    display: none;
+}
+
+
+.start-button {
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+    border-radius: 12px;
+    height: 50px;
+    width: 120px;
+    animation: glowing 1600ms infinite;
+}
+
+
+.start-button:hover {
+  cursor: pointer;
+}
+
+
+@keyframes glowing {
+  0% { background-color: #bbce0e; box-shadow: 0 0 40px #e9ec06; }
+  50% { background-color: #49e819; box-shadow: 0 0 40px #49e819; }
+  100% { background-color: #2ba805; box-shadow: 0 0 4px #2ba805; }
+  }
+
+
+.optionposition  {
+    background-image: url(img/Background.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;   
+}
+
+
+.positiontitlecontrol {
+  display: flex;
+  justify-content: center;
+}
+
+
+.control {
+  font-size: 40px;
+  margin: 0px;
+}
+
+
+.keys {
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+}
+
+
+.keyD {
+    height: 70px;
+    width: 70px;
+    padding-left: 30px; 
+    object-fit: contain; 
+}
+
+
+.keySpace {
+    height: 70px;
+    width: 150px;
+    object-fit: contain;
+}
+
+
+.positionKeys {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 30px;
+    
+}
+
+
+.winscreen  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+    background-image: url("img/winscreen.png");
+    background-size: cover;
+    
+}
+
+
+.tryagain {
+  position: absolute;
+  object-fit: contain;
+  bottom: 30px;
+  height: 100px;
+  width: 200px;
+}
+
+
+.tryagainposition {
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.losescreen {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: rgba(0,0,0,0.2);
+  color: white;
+}
+
+
+.gameoverposition {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+
+.gameovertitle {
+  height: 80px;
+  width: 500px;
+}
+
+
+
+.keyboardicon {
+    height: 40px;
+    width: 40px;
+}
+
+
+.keyboardicon:hover {
+  cursor: pointer;
+}
+
+
+.buttonbackground {
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    border-radius: 30px;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;  
+}
+
+
+  .wrapper div {
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: 4s linear infinite;
+  }
+
+
+  div .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 20%;
+    right: 20%;
+  }
+
+
+  .wrapper div:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(2) {
+    top: 60%;
+    left: 80%;
+    animation: animate 10s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(3) {
+    top: 40%;
+    left: 40%;
+    animation: animate 3s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(4) {
+    top: 66%;
+    left: 30%;
+    animation: animate 7s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(5) {
+    top: 90%;
+    left: 10%;
+    animation: animate 9s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(6) {
+    top: 30%;
+    left: 60%;
+    animation: animate 5s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(7) {
+    top: 70%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(8) {
+    top: 75%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(9) {
+    top: 50%;
+    left: 50%;
+    animation: animate 6s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(10) {
+    top: 45%;
+    left: 20%;
+    animation: animate 10s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(11) {
+    top: 10%;
+    left: 90%;
+    animation: animate 9s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(12) {
+    top: 20%;
+    left: 70%;
+    animation: animate 7s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(13) {
+    top: 20%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(14) {
+    top: 60%;
+    left: 5%;
+    animation: animate 6s linear infinite;
+  }
+
+
+  .wrapper div:nth-child(15) {
+    top: 90%;
+    left: 80%;
+    animation: animate 9s linear infinite;
+  }
+
+
+  @keyframes animate {
+    0% {
+      transform: scale(0) translateY(0) rotate(70deg);
+    }
+    100% {
+      transform: scale(1.3) translateY(-100px) rotate(360deg);
+    }
+  }
+
+
+  .win {
+    position: absolute;
+    top: 0px;
+  }
+
+
+  .optionScreen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+
+  .closeicon {
+    height: 30px;
+    width: 30px;
+  }
+
+
+  .closebutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: yellow;
+    border: 3px solid white;
+    border-radius: 30px;
+  }
+
+
+  .closebutton:hover {
+    cursor: pointer;
+  }
+
+
+ .phone {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 10px;
+ }
+
+@keyframes rotateAnimation {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-90deg);
+    }
+    75% {
+        transform: rotate(-90deg);
+    }
+}
+
+
+.responsiveButton {
+  height: 30px;
+  width: 30px;
+}
+
+
+.cobutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: yellow;
+  border: 3px solid white;
+  border-radius: 30px;
+}
+
+
+.lebutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: yellow;
+  border: 3px solid white;
+  border-radius: 30px;
+  margin-right: 30px;
+}
+
+
+.responsiveControlls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+
+.leftandright {
+  display: flex;
+}
+
+
+.bubblebuttons {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  bottom: 50px;
+}
+
+
+.downbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: yellow;
+  border: 3px solid white;
+  border-radius: 30px;
+  margin-left: 40px;
+}
+
+
+.upbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: yellow;
+  border: 3px solid white;
+  border-radius: 30px;
+  margin-left: 40px;
+
+}
+
+
+.phone {
+  background-image: url(img/Background.png);
+  background-size: cover;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+}
+
+
+.phoneicon {
+  height: 200px;
+  width: 200px;
+}
+
+
+.flip {
+  display: none;
+  height: 100vh;
+  width: 100%;
+}
+
+
+
+ @media (max-width: 720px) and (orientation: portrait){
+  .flip {
+    display: flex;
+    
+  }
+ }
+
+
+
+  @media only screen and (max-width: 720px){
+    canvas {
+      width: 100%; 
+    }
+  }
+  
+  
+  @media only screen and (max-height: 480px){
+    canvas {
+      height: 100vh;
+    } 
+    
+    
+    .keys {
+      height: 120px;
+      width: 120px;
+    }
+
+
+    .keyD {
+      height: 50px;
+      width: 50px;
+    }
+
+
+    .keySpace {
+      height: 50px;
+      width: 120px;
+    }
+
+
+    .titlesharkie {
+      font-size: 60px;
+    }
+  }
+
+
+ 
+
+  
+
+
+
+
+
+
+
+
+
+
+
+

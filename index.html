@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/1.Sharkie/3.Swim/3.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="models/drawable-object.class.js"></script>
+    <script src="models/movable-object.class.js"></script>
+    <script src="models/character.class.js"></script>
+    <script src="models/coins.class.js"></script>
+    <script src="models/poison-bottle.class.js"></script>
+    <script src="models/fish.class.js"></script>
+    <script src="models/jellyfish.green.class.js"></script>
+    <script src="models/jellyfish.pink.class.js"></script>
+    <script src="models/jellyfish.lila.class.js"></script>
+    <script src="models/jellyfish.yellow.class.js"></script>
+    <script src="models/light.class.js"></script>
+    <script src="models/status-bar.class.js"></script>
+    <script src="models/coin-bar.class.js"></script>
+    <script src="models/poison-bottle-bar.class.js"></script>
+    <script src="models/world.class.js"></script>
+    <script src="models/background-object.class.js"></script>
+    <script src="models/keyboard.class.js"></script>
+    <script src="models/level.class.js"></script>
+    <script src="models/throwable-object.class.js"></script>
+    <script src="models/throwable-object-poison.class.js"></script>
+    <script src="models/endboss.class.js"></script>
+    <script src="levels/level1.js"></script>
+    <script src="js/game.js"></script>
+    <title>Sharkie</title>
+</head>
+
+<body onload="init()">
+
+    <div class="screens">
+        <canvas class="canvas-shadow" id="canvas" width="720" height="480"> </canvas>
+
+        <!-- Start screen-->
+        <div id="start" class="startscreen">
+            <div class="header">
+                <h1 class="titlesharkie">Sharkie</h1>
+            </div>
+
+            <img onclick="startTheGame()" class="start-button" src="img/6.Botones/Start/3.png">
+
+            <div class="buttonbackground">
+                <img class="keyboardicon" onclick="options()" src="img/icons/keyboard.png">
+            </div>
+            <!-- Bubbles-->
+            <div class="wrapper">
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+            </div>
+        </div>
+
+        <!-- Win screen-->
+        <div id="win" class="winscreen d-none">
+            <div class="tryagainposition">
+                <img onclick="restartGame()" class="tryagain" src="img/3. Background/winscreen.png">
+            </div>
+        </div>
+
+        <!-- Lose screen-->
+        <div id="lose" class="losescreen d-none">
+            <div class="gameoverposition">
+                <img class="gameovertitle" src="img/6.Botones/Tittles/Game Over/Recurso 10.png"></img>
+            </div>
+            <div class="tryagainposition">
+                <img onclick="restartGame()" class="tryagain" src="img/6.Botones/Try again/Recurso 17.png">
+            </div>
+        </div>
+
+        <!-- option screen-->
+        <div id="optionKeys" class="optionScreen d-none">
+            <div class="optionposition">
+                <div class="positiontitlecontrol">
+                    <h1 class="control">Controls</h1>
+                </div>
+                <div class="closebutton"><img onclick="closeOption()" class="closeicon" src="img/icons/close.png"> </div>
+                <div class="positionKeys"><img class="keys" src="img/6.Botones/Key/arrow keys.png">Move the shark</div>
+                <div class="positionKeys"><img class="keyD" src="img/6.Botones/Key/D key.png">Attack on endboss</div>
+                <div class="positionKeys"><img class="keySpace" src="img/6.Botones/Key/Space Bar key.png">Attack on enemies</div>      
+            </div>
+        </div>
+
+
+        <!-- handy buttons-->
+        <div id="mobile-controls" class="d-none">
+            <div class="responsiveControlls">
+                <div class="upbutton"><img id="UPBTN" class="responsiveButton" src="img/up.png"></div>
+                <div class="leftandright">
+                    <div class="lebutton"><img id="LEFTBTN" class="responsiveButton" src="img/left.png"></div>
+                    <div class="cobutton"><img id="RIGHTBTN" class="responsiveButton" src="img/right.png"></div>
+                </div>
+                <div class="downbutton"><img id="DBTN" class="responsiveButton" src="img/down.png"></div>
+            </div>
+            <div class="bubblebuttons">
+                <div class="upbutton"><img id="POISON" class="responsiveButton"
+                        src="img/1.Sharkie/4.Attack/Bubble trap/Poisoned Bubble (for whale).png"></div>
+                <div class="upbutton"><img id="BUBBLE" class="responsiveButton"
+                        src="img/1.Sharkie/4.Attack/Bubble trap/Bubble.png"></div>
+            </div>
+        </div> 
+    </div>
+
+    
+     <!-- Turn your phone screen-->
+     <div class="flip">
+        <div class="phone" id="phone-rotation">
+            <h2>Turn your Phone</h2>
+            <img class="phoneicon" src="img/icons/turn_phone.png">
+        </div>
+    </div>
+</body>
+
+</html>
