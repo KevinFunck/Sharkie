@@ -156,7 +156,7 @@ class Character extends MovableObject {
         this.attack = false;
         setTimeout(() => {
             this.attack = true;   
-        }, 60);
+        }, 100);
     }
 
 
@@ -220,6 +220,7 @@ class Character extends MovableObject {
 
         }else if (this.world.keyboard.D && this.otherDirection == false && this.world.bottlesCollected > 0) {
             this.playAnimation(this.IMAGES_ATTACK_POISON);
+            this.bubble_sound.play();
 
         } else if (this.world.keyboard.Right || this.world.keyboard.Left || this.world.keyboard.Up || this.world.keyboard.Down) {
             this.playAnimation(this.IMAGES_SWIM);

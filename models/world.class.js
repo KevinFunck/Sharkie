@@ -177,14 +177,14 @@ class World {
         if (this.keyboard.D && this.objectIsThrowable && this.character.otherDirection == false && this.bottlesCollected > 0) {
             this.nextBubble();
             this.bottlesCollected--;
-            let poison = new ThrowableObjectPoison(this.character.x + 200, this.character.y + 100);
+            let poison = new ThrowableObjectPoison(this.character.x + 200, this.character.y + 140);
             this.throwableObjectPoison.push(poison);
             this.character.posionShotCounter();
             this.poisonBottleBar.setPercentage(this.character.posionShot);
 
         } if (this.keyboard.Space && this.objectIsThrowable && this.character.otherDirection == false) {
             this.nextBubble();
-            let bubble = new ThrowableObject(this.character.x + 200, this.character.y + 100);
+            let bubble = new ThrowableObject(this.character.x + 200, this.character.y + 140);
             this.throwableObject.push(bubble);
         }
     }
