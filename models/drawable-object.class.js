@@ -41,30 +41,30 @@ class DrawableObject {
     drawFrame(ctx) {
         if (this instanceof PoisonBottle || this instanceof Coins || this instanceof JellyfishLila || this instanceof JellyfishGreen || this instanceof JellyfishPink || this instanceof JellyfishYellow || this instanceof ThrowableObject || this instanceof ThrowableObjectPoison) {
             ctx.beginPath();
-            //ctx.linewidth = '5';
+            ctx.linewidth = '5';
            // ctx.strokeStyle = 'blue';
-            ctx.rect(this.x, this.y, this.width, this.height);
+           //ctx.rect(this.x, this.y, this.width, this.height);
             //ctx.stroke();
         }else if (this instanceof Fish  ){
             ctx.beginPath();
             //ctx.linewidth = '5';
             //ctx.strokeStyle = 'blue';
-            ctx.rect(this.x, this.y, this.width +30, this.height - 60);
+            //ctx.rect(this.x, this.y, this.width +30, this.height - 60);
             //ctx.stroke();
 
         } else if (this instanceof Character) {
-            //ctx.beginPath();
-            //ctx.linewidth = '5';
+            ctx.beginPath();
+           // ctx.linewidth = '5';
             //ctx.strokeStyle = 'blue';
-            ctx.rect(this.x +40 , this.y +100 , this.width , this.height -240);
-            //ctx.stroke();
+            //ctx.rect(this.x +60 , this.y +100 , this.width -30, this.height -240);
+           // ctx.stroke();
 
         } else if (this instanceof Endboss) {
-            //ctx.beginPath();
-            //ctx.linewidth = '5';
+            ctx.beginPath();
+            ctx.linewidth = '5';
             //ctx.strokeStyle = 'blue';
-            ctx.rect(this.x + 40, this.y + 90, this.width + 10, this.height - 240);
-            //ctx.stroke();      
+           // ctx.rect(this.x + 60, this.y, this.width, this.height);
+           // ctx.stroke();      
         }
     }
 
@@ -80,12 +80,5 @@ class DrawableObject {
             this.imgCache[path] = img;
         });
     }
-
-
-
-
-
-
-
 }
 

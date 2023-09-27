@@ -5,7 +5,7 @@ class MovableObject extends DrawableObject {
     /** Energy of the character */
     energy = 100;
     /** Speed of the endboss */
-    speedEndboss = 4;
+    speedEndboss = 3.8;
     collected = 0;
     bottles = 0;
     /** To check when the last hit happened */
@@ -88,11 +88,11 @@ class MovableObject extends DrawableObject {
      */
     isColliding(mo) {
         if (this instanceof Character) {
-            return this.x + 40 + this.width >= mo.x &&
-                this.x + 40 + this.width >= mo.x &&
-                this.x + 40 <= mo.x + mo.width &&
-                this.y + 100 + this.height - 240 > mo.y &&
-                this.y + 100 <= mo.y + mo.height
+            return this.x + 70 + this.width - 120 >= mo.x &&
+            this.x + 70 + this.width - 130 >= mo.x &&
+            this.x + 70 <= mo.x + mo.width &&
+            this.y + 130 + this.height - 180 > mo.y &&
+            this.y + 130 <= mo.y + mo.height
 
         } else if (this instanceof Fish) {
             return this.x  + this.width + 30 >= mo.x &&
@@ -127,7 +127,7 @@ class MovableObject extends DrawableObject {
 
     /** Is for the damage what the character get from the endboss */
     hitMeEndboss() {
-        this.energy -= 20;
+        this.energy -= 2;
         if (this.energy < 0) {
             this.energy = 0;
         } else {

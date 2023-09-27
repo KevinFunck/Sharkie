@@ -194,12 +194,12 @@ class World {
     checkCollisionWithEndboss() {
         setInterval(() => {
             this.level.endboss.forEach((end) => {
-                if (this.character.isColliding(end)) {
+                if (this.character.isColliding(end) && this.endboss.energy > 0) {
                     this.character.hitMeEndboss();
                     this.statusBar.setPercentage(this.character.energy);
                 }
             });
-        },500);
+        },800);
     }
 
 

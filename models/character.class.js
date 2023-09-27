@@ -1,10 +1,10 @@
 class Character extends MovableObject {
     /** Height of the character */
-    height = 300;
+    height = 250;
     /** Width of the character */
-    width = 200;
+    width = 250;
     /** Speed of the character */
-    speed = 5;
+    speed = 4.5;
     currentImage = 0;
     /** Instance of the world where the objects are shown and animated */
     world;

@@ -1,10 +1,10 @@
 class Endboss extends MovableObject {
     /** Height of the endboss */
-    height = 700;
+    height = 750;
     /** Width of the endboss */
-    width = 700;
+    width = 750;
     /** Y-Axis of the endboss */
-    y = -160;
+    y = -200;
     /** x-Axis of the endboss */
     x = 3100;
     spawning_sound = new Audio('audio/spawning.mp3');
@@ -82,7 +82,7 @@ class Endboss extends MovableObject {
         this.x = 3200;
     }
 
-
+    /** Start the endboss */
     startEndboss() {
         if(!this.startedEndboss) {
             this.startedEndboss = true;
@@ -122,7 +122,7 @@ class Endboss extends MovableObject {
         }, 500);   
     }
 
-    
+    /** Start the attack */
     startBossAttack() {
         setInterval(() => {
             if(!this.isAttacking && this.isHurt()) {
