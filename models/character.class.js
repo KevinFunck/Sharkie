@@ -156,7 +156,7 @@ class Character extends MovableObject {
         this.attack = false;
         setTimeout(() => {
             this.attack = true;   
-        }, 100);
+        }, 10);
     }
 
 

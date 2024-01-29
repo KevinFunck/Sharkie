@@ -1,30 +1,31 @@
 class Fish extends MovableObject {
     height = 100;
-    width = 50;
+    width = 100;
     IMAGES_SWIM = [
-        'img/2.Enemy/1.Puffer fish (3 color options)/1.Swim/3.swim1.png',
-        'img/2.Enemy/1.Puffer fish (3 color options)/1.Swim/3.swim2.png',
-        'img/2.Enemy/1.Puffer fish (3 color options)/1.Swim/3.swim3.png',
-        'img/2.Enemy/1.Puffer fish (3 color options)/1.Swim/3.swim4.png',
-        'img/2.Enemy/1.Puffer fish (3 color options)/1.Swim/3.swim5.png'
+        'img/2.Enemy/2 Jelly fish/Súper dangerous/Pink 1.png',
+        'img/2.Enemy/2 Jelly fish/Súper dangerous/Pink 2.png',
+        'img/2.Enemy/2 Jelly fish/Súper dangerous/Pink 3.png',
+        'img/2.Enemy/2 Jelly fish/Súper dangerous/Pink 4.png'
     ];
 
 
     IMAGES_DEAD = [
-        'img/2.Enemy/1.Puffer fish (3 color options)/4.DIE/3.2.png'
+        'img/2.Enemy/2 Jelly fish/Dead/Pink/P1.png',
+        'img/2.Enemy/2 Jelly fish/Dead/Pink/P2.png',
+        'img/2.Enemy/2 Jelly fish/Dead/Pink/P3.png',
     ];
-
+    
     constructor() {
-        super().loadimage('img/2.Enemy/1.Puffer fish (3 color options)/1.Swim/3.swim1.png');
+        super().loadimage('img/2.Enemy/2 Jelly fish/Súper dangerous/Green 1.png');
         this.loadImages(this.IMAGES_SWIM);
         this.loadImages(this.IMAGES_DEAD);
-        this.x = 600 + Math.random() * 500;
-        this.y = 200 + Math.random() * 210;
-        this.speed = 0.4 + Math.random() * 0, 5;
+        this.x = 400 + Math.random() * 500;  
+        this.y = 200 + Math.random() * 210;  
+        this.speed = 0.15 + Math.random() * 0,5;
         this.animate();
     }
 
-
+    
     animate() {
         this.moveleft();
 

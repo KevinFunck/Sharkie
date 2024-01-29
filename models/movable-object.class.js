@@ -5,7 +5,7 @@ class MovableObject extends DrawableObject {
     /** Energy of the character */
     energy = 100;
     /** Speed of the endboss */
-    speedEndboss = 3.8;
+    speedEndboss = 3.3;
     collected = 0;
     bottles = 0;
     /** To check when the last hit happened */
